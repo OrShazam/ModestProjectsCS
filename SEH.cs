@@ -57,7 +57,7 @@ namespace SEH
                 Console.WriteLine("ERROR: Trying to overwrite handler for error code {0}", errCode);
                 return;
             }
-            this.nextHandler = new SEH(errCode, handle);
+            this.nextHandler = new SEH(errCode, handle); // need to actually append I'm dumb
 
         }
     }
