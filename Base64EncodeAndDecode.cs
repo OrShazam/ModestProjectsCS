@@ -3,7 +3,7 @@ public class Program
 {
 	// kind of dumb to make my own implementation and not just use convert.frombase64/tobase64 
         // and yet use fancy system methods like .replace and .substring, yet I felt like doing something today and share it to the world.
-	
+	// I have no Idea why it doesn't actually work - if you do please enlight me.
 	public static string addPadding(string binary){
 		string binary_copy = binary;
 		int length = binary.Length;
