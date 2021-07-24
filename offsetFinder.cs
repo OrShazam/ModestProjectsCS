@@ -6,7 +6,7 @@ using System.Threading;
 namespace OffsetFinder
 {
     // simple offset finder that simply doesn't work
-    // cause of stack randomization and stuff
+    // I personally blame stack protections techniques and my poor coding skills
     class Program
     {
         static readonly int GIVEUPCOUNT = 10000; //IDK?
