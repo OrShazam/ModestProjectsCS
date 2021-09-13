@@ -7,7 +7,7 @@ namespace doctorinjector
 {
     class Program
     {
-        // simple injector, all you have to do is pass the path to the shellcode where I marked at line 60.
+        // simple injector, all you have to do is pass the path to the shellcode where I marked at line 60, probably...
         
         [DllImport("kernel32.dll", SetLastError = true)]
         static extern IntPtr VirtualAllocEx(IntPtr hProcess, IntPtr lpAddress,
@@ -43,9 +43,6 @@ namespace doctorinjector
 
         static void Main(string[] args)
         {
-#if DEBUG 
-            return;
-#endif
             var target = new Process
             {
                 StartInfo = new ProcessStartInfo
