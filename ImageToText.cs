@@ -4,8 +4,10 @@ using System.Reflection;
 using System.IO;
 namespace ImageToText
 {
+
     class Program
     {
+        const int size = 50; // change
         static string getRandomFilename()
         {
             byte[] buffer = new byte[4];
@@ -50,11 +52,12 @@ namespace ImageToText
             }
             try
             {
-                Bitmap bitmap = new Bitmap(path);
-                if (bitmap.Width > 200 || bitmap.Height > 200)
+                Image img = Image.FromFile(path);
+                Bitmap bitmap = new Bitmap(img);
+                if (bitmap.Width > 100)
                 {
-                    Console.WriteLine("Text art is useless for such a big image.");
-                    goto Start;
+                    bitmap = new Bitmap(img, new Size(size, size / 2 * (int)((double)bitmap.Height / bitmap.Width)));
+                    // size / 2 better for text art
                 }
                 string[] text = makeText(bitmap);
                 string picturesPath = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
