@@ -40,7 +40,6 @@ namespace truerRandom
             // like 10000 the program takes forever
             // I guess it has something to do with exponential complexity
             // but I have no idea how to optimize it or what it's about
-            // if you do have an idea please contact me on discord
             Console.WriteLine(result);
             Console.ReadKey();
         }
